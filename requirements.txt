@@ -1,0 +1,5 @@
+(
+echo pytest
+echo ruff
+echo mypy
+) > requirements.txt

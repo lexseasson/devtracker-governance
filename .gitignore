@@ -1,0 +1,12 @@
+(
+echo __pycache__/
+echo *.pyc
+echo .mypy_cache/
+echo .ruff_cache/
+echo .pytest_cache/
+echo .venv/
+echo venv/
+echo artifacts/
+echo reports/
+echo *.bak_*
+) > .gitignore
