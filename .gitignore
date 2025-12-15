@@ -1,12 +1,18 @@
-(
-echo __pycache__/
-echo *.pyc
-echo .mypy_cache/
-echo .ruff_cache/
-echo .pytest_cache/
-echo .venv/
-echo venv/
-echo artifacts/
-echo reports/
-echo *.bak_*
-) > .gitignore
+# local env
+.venv/
+
+# python caches
+__pycache__/
+*.pyc
+
+# tool caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# runtime outputs
+artifacts/
+reports/
+
+# tracker backups
+*.bak_*
