@@ -1,5 +1,2 @@
-(
-echo pytest
-echo ruff
-echo mypy
-) > requirements.txt
+
+# DevTracker has no runtime dependencies beyond Python stdlib
