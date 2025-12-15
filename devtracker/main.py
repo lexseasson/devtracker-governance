@@ -195,7 +195,15 @@ def _run_cmd(cmd: List[str], cwd: Optional[Path] = None) -> CmdResult:
 
 def _repo_root() -> Path:
     here = Path(__file__).resolve()
-    return here.parents[2]
+    # Preferimos git como autoridad del root del repo (multi-entorno y mono-repo friendly)
+    try:
+        res = _run_cmd(["git", "rev-parse", "--show-toplevel"], cwd=here.parent)
+        if res.returncode == 0 and res.stdout.strip():
+            return Path(res.stdout.strip())
+    except Exception:
+        pass
+    # Fallback: devtracker/main.py -> repo root = parent del paquete
+    return here.parents[1]
 
 
 # =========================
