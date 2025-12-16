@@ -1,18 +1,14 @@
-# local env
+# Python
 .venv/
-
-# python caches
 __pycache__/
 *.pyc
 
-# tool caches
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
+# DevTracker outputs (queremos versionar artifacts y reports en ESTE repo)
+# NO ignorar artifacts/ ni reports/
 
-# runtime outputs
-artifacts/
-reports/
-
-# tracker backups
+# Backups
 *.bak_*
+
+# OS
+.DS_Store
+Thumbs.db
