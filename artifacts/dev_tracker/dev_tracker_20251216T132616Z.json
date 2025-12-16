@@ -1,0 +1,149 @@
+{
+  "generated_utc": "2025-12-16T13:26:16Z",
+  "schema": "dev_tracker.v0.5",
+  "tracker": {
+    "path": "examples/AGENTS_TRACKER_BASE.csv",
+    "encoding_in": "utf-8-sig",
+    "delimiter_in": ";",
+    "rows": 20,
+    "columns_out": [
+      "office_id",
+      "office_nombre",
+      "agent_name",
+      "agent_type",
+      "estado",
+      "prioridad",
+      "layer",
+      "rol_play",
+      "repo_id",
+      "proposito_tecnico",
+      "potencial_comercial",
+      "inputs",
+      "outputs",
+      "pipelines_uso",
+      "tablas_db",
+      "data_sources",
+      "core_metrics",
+      "estado_dev",
+      "ultima_actualizacion",
+      "last_git_touch_utc",
+      "update_author",
+      "notas",
+      "code_path",
+      "dev_stream",
+      "quality_score",
+      "confidence_score",
+      "velocity_7d",
+      "velocity_30d",
+      "churn_30d",
+      "stability_days"
+    ],
+    "encoding_out": "utf-8-sig",
+    "delimiter_out": ";",
+    "repo_id": "devtracker-governance"
+  },
+  "git": {
+    "branch": "main",
+    "head": "dc0b287ef96b1e914c1725d3a9b1565119b474c2",
+    "describe": "dc0b287",
+    "requested_base_ref": "origin/main",
+    "base_ref": "origin/main",
+    "merge_base": "dc0b287ef96b1e914c1725d3a9b1565119b474c2",
+    "dirty": true,
+    "status_porcelain": [
+      "?? artifacts/",
+      "?? reports/"
+    ],
+    "diff_files": [],
+    "status_files": [
+      "artifacts",
+      "reports"
+    ],
+    "all_changed_files": [
+      "artifacts",
+      "reports"
+    ],
+    "diffstat": "",
+    "log_oneline": []
+  },
+  "quality_suite": {
+    "all_ok": true,
+    "quality_score": 1.0,
+    "pytest": {
+      "cmd": [
+        "C:\\Users\\eugen\\source\\repos\\agentesia\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "returncode": 0,
+      "ok": true
+    },
+    "ruff": {
+      "cmd": [
+        "C:\\Users\\eugen\\source\\repos\\agentesia\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "."
+      ],
+      "returncode": 0,
+      "ok": true
+    },
+    "mypy": {
+      "cmd": [
+        "C:\\Users\\eugen\\source\\repos\\agentesia\\.venv\\Scripts\\python.exe",
+        "-m",
+        "mypy",
+        "--config-file",
+        "mypy.ini",
+        "."
+      ],
+      "returncode": 0,
+      "ok": true
+    },
+    "stdout": {
+      "pytest": ".                                                                        [100%]\n1 passed in 0.03s",
+      "ruff": "All checks passed!",
+      "mypy": "Success: no issues found in 4 source files"
+    },
+    "stderr": {
+      "pytest": "",
+      "ruff": "",
+      "mypy": ""
+    }
+  },
+  "changes": {
+    "entities": {},
+    "counts": {
+      "agents_changed": 0,
+      "tools_changed": 0,
+      "apps_changed": 0
+    }
+  },
+  "policy": {
+    "core_updates_apply": false,
+    "metrics_updates_apply": false,
+    "author": "dev_tracker",
+    "windows": {
+      "journal_lookback_days": 60,
+      "metrics_days_short": 7,
+      "metrics_days_long": 30
+    }
+  },
+  "tracker_updates": {
+    "proposed_core": [],
+    "proposed_metrics": [],
+    "apply_requested": false,
+    "apply_metrics_requested": false,
+    "applied_core_count": 0,
+    "applied_metrics_count": 0,
+    "backup_path": ""
+  },
+  "outputs": {
+    "json": "artifacts/dev_tracker/dev_tracker_20251216T132616Z.json",
+    "md": "reports/dev_tracker/dev_tracker_status.md",
+    "proposed_updates_core_csv": "artifacts/dev_tracker/proposed_updates_core_20251216T132616Z.csv",
+    "proposed_updates_metrics_csv": "artifacts/dev_tracker/proposed_updates_metrics_20251216T132616Z.csv"
+  }
+}

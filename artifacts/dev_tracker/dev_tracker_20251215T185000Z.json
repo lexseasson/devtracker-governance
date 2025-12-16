@@ -1,0 +1,819 @@
+{
+  "generated_utc": "2025-12-15T18:50:00Z",
+  "schema": "dev_tracker.v0.5",
+  "tracker": {
+    "path": "examples/AGENTS_TRACKER_BASE.csv",
+    "encoding_in": "utf-8-sig",
+    "delimiter_in": ";",
+    "rows": 115,
+    "columns_out": [
+      "office_id",
+      "office_nombre",
+      "agent_name",
+      "agent_type",
+      "estado",
+      "prioridad",
+      "layer",
+      "rol_play",
+      "repo_id",
+      "proposito_tecnico",
+      "potencial_comercial",
+      "inputs",
+      "outputs",
+      "pipelines_uso",
+      "tablas_db",
+      "data_sources",
+      "core_metrics",
+      "estado_dev",
+      "ultima_actualizacion",
+      "last_git_touch_utc",
+      "update_author",
+      "notas",
+      "code_path",
+      "dev_stream",
+      "quality_score",
+      "confidence_score",
+      "velocity_7d",
+      "velocity_30d",
+      "churn_30d",
+      "stability_days"
+    ],
+    "encoding_out": "utf-8-sig",
+    "delimiter_out": ";",
+    "repo_id": "devtracker-governance"
+  },
+  "git": {
+    "branch": "main",
+    "head": "b8bde0f8a209201d6ef38a4eb482d3da5344e116",
+    "describe": "b8bde0f-dirty",
+    "requested_base_ref": "origin/main",
+    "base_ref": "origin/main",
+    "merge_base": "b8bde0f8a209201d6ef38a4eb482d3da5344e116",
+    "dirty": true,
+    "status_porcelain": [
+      "M README.md"
+    ],
+    "diff_files": [],
+    "status_files": [
+      "EADME.md"
+    ],
+    "all_changed_files": [
+      "EADME.md"
+    ],
+    "diffstat": "",
+    "log_oneline": []
+  },
+  "quality_suite": {
+    "all_ok": true,
+    "quality_score": 1.0,
+    "pytest": {
+      "cmd": [
+        "C:\\Users\\eugen\\source\\repos\\agentesia\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "returncode": 0,
+      "ok": true
+    },
+    "ruff": {
+      "cmd": [
+        "C:\\Users\\eugen\\source\\repos\\agentesia\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "."
+      ],
+      "returncode": 0,
+      "ok": true
+    },
+    "mypy": {
+      "cmd": [
+        "C:\\Users\\eugen\\source\\repos\\agentesia\\.venv\\Scripts\\python.exe",
+        "-m",
+        "mypy",
+        "--config-file",
+        "mypy.ini",
+        "."
+      ],
+      "returncode": 0,
+      "ok": true
+    },
+    "stdout": {
+      "pytest": ".                                                                        [100%]\n1 passed in 0.03s",
+      "ruff": "All checks passed!",
+      "mypy": "Success: no issues found in 4 source files"
+    },
+    "stderr": {
+      "pytest": "",
+      "ruff": "",
+      "mypy": ""
+    }
+  },
+  "changes": {
+    "entities": {},
+    "counts": {
+      "agents_changed": 0,
+      "tools_changed": 0,
+      "apps_changed": 0
+    }
+  },
+  "policy": {
+    "core_updates_apply": true,
+    "metrics_updates_apply": true,
+    "author": "dev_tracker",
+    "windows": {
+      "journal_lookback_days": 60,
+      "metrics_days_short": 7,
+      "metrics_days_long": 30
+    }
+  },
+  "tracker_updates": {
+    "proposed_core": [],
+    "proposed_metrics": [
+      {
+        "agent_name": "api_server",
+        "field": "confidence_score",
+        "old": "0.713",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "auto_reader",
+        "field": "confidence_score",
+        "old": "0.723",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "bot_trainer",
+        "field": "confidence_score",
+        "old": "0.703",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "calendar_ops",
+        "field": "confidence_score",
+        "old": "0.637",
+        "new": "0.500",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "cdc_index",
+        "field": "velocity_30d",
+        "old": "1",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "cdc_index",
+        "field": "confidence_score",
+        "old": "0.647",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "cdc_prices",
+        "field": "velocity_30d",
+        "old": "1",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "cdc_prices",
+        "field": "confidence_score",
+        "old": "0.647",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "cdc_telecom",
+        "field": "velocity_30d",
+        "old": "1",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "cdc_telecom",
+        "field": "confidence_score",
+        "old": "0.647",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "crypto_autotrader",
+        "field": "confidence_score",
+        "old": "0.703",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "crypto_backtest",
+        "field": "confidence_score",
+        "old": "0.710",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "crypto_competitor",
+        "field": "confidence_score",
+        "old": "0.703",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "crypto_factsheet",
+        "field": "confidence_score",
+        "old": "0.710",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "crypto_replay",
+        "field": "confidence_score",
+        "old": "0.710",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "crypto_signals",
+        "field": "confidence_score",
+        "old": "0.713",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "crypto_trader",
+        "field": "confidence_score",
+        "old": "0.710",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "data_exporter",
+        "field": "confidence_score",
+        "old": "0.710",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "data_lake_loader",
+        "field": "velocity_7d",
+        "old": "3",
+        "new": "0",
+        "reason": "Commits count since window for code_path."
+      },
+      {
+        "agent_name": "data_lake_loader",
+        "field": "velocity_30d",
+        "old": "3",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "data_lake_loader",
+        "field": "confidence_score",
+        "old": "0.620",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "deal_desk",
+        "field": "confidence_score",
+        "old": "0.710",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "design_comms",
+        "field": "confidence_score",
+        "old": "0.637",
+        "new": "0.500",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "dev_tracker",
+        "field": "velocity_7d",
+        "old": "3",
+        "new": "0",
+        "reason": "Commits count since window for code_path."
+      },
+      {
+        "agent_name": "dev_tracker",
+        "field": "velocity_30d",
+        "old": "3",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "dev_tracker",
+        "field": "confidence_score",
+        "old": "0.613",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "digital_poverty",
+        "field": "velocity_30d",
+        "old": "4",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "digital_poverty",
+        "field": "confidence_score",
+        "old": "0.657",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "editorial",
+        "field": "velocity_30d",
+        "old": "2",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "editorial",
+        "field": "confidence_score",
+        "old": "0.640",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "editorial_curator",
+        "field": "confidence_score",
+        "old": "0.710",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "email_ops",
+        "field": "confidence_score",
+        "old": "0.637",
+        "new": "0.500",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "eph_etl",
+        "field": "velocity_30d",
+        "old": "1",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "eph_etl",
+        "field": "confidence_score",
+        "old": "0.647",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "eph_ingestor",
+        "field": "velocity_30d",
+        "old": "1",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "eph_ingestor",
+        "field": "confidence_score",
+        "old": "0.647",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "eph_unify",
+        "field": "velocity_30d",
+        "old": "1",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "eph_unify",
+        "field": "confidence_score",
+        "old": "0.647",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "github_ci",
+        "field": "confidence_score",
+        "old": "0.637",
+        "new": "0.500",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "governor",
+        "field": "velocity_30d",
+        "old": "1",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "governor",
+        "field": "confidence_score",
+        "old": "0.640",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "indec_catalog",
+        "field": "velocity_30d",
+        "old": "1",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "indec_catalog",
+        "field": "confidence_score",
+        "old": "0.637",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "indec_download",
+        "field": "velocity_30d",
+        "old": "1",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "indec_download",
+        "field": "confidence_score",
+        "old": "0.537",
+        "new": "0.500",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "init_master_db",
+        "field": "velocity_30d",
+        "old": "1",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "init_master_db",
+        "field": "confidence_score",
+        "old": "0.533",
+        "new": "0.500",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "integrator",
+        "field": "velocity_30d",
+        "old": "1",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "integrator",
+        "field": "confidence_score",
+        "old": "0.647",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "ipc_nowcaster",
+        "field": "confidence_score",
+        "old": "0.710",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "keyword_alerts",
+        "field": "confidence_score",
+        "old": "0.710",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "kpi_global",
+        "field": "velocity_30d",
+        "old": "1",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "kpi_global",
+        "field": "confidence_score",
+        "old": "0.640",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "kpi_monitor",
+        "field": "confidence_score",
+        "old": "0.710",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "legal_rwa",
+        "field": "confidence_score",
+        "old": "0.637",
+        "new": "0.500",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "loader_cdc",
+        "field": "velocity_30d",
+        "old": "1",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "loader_cdc",
+        "field": "confidence_score",
+        "old": "0.533",
+        "new": "0.500",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "loader_crypto",
+        "field": "velocity_30d",
+        "old": "1",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "loader_crypto",
+        "field": "confidence_score",
+        "old": "0.533",
+        "new": "0.500",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "loader_eph",
+        "field": "velocity_30d",
+        "old": "1",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "loader_eph",
+        "field": "confidence_score",
+        "old": "0.533",
+        "new": "0.500",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "loader_indec",
+        "field": "velocity_30d",
+        "old": "1",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "loader_indec",
+        "field": "confidence_score",
+        "old": "0.533",
+        "new": "0.500",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "loader_nexus",
+        "field": "velocity_30d",
+        "old": "1",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "loader_nexus",
+        "field": "confidence_score",
+        "old": "0.533",
+        "new": "0.500",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "loader_rss",
+        "field": "velocity_30d",
+        "old": "1",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "loader_rss",
+        "field": "confidence_score",
+        "old": "0.533",
+        "new": "0.500",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "macro_forecaster",
+        "field": "confidence_score",
+        "old": "0.710",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "macro_watcher",
+        "field": "confidence_score",
+        "old": "0.730",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "market_scraper",
+        "field": "confidence_score",
+        "old": "0.713",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "mining_intel",
+        "field": "confidence_score",
+        "old": "0.737",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "nexus_brief",
+        "field": "velocity_30d",
+        "old": "1",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "nexus_brief",
+        "field": "confidence_score",
+        "old": "0.647",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "nexus_cluster",
+        "field": "velocity_30d",
+        "old": "2",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "nexus_cluster",
+        "field": "confidence_score",
+        "old": "0.643",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "nexus_forecast",
+        "field": "velocity_30d",
+        "old": "2",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "nexus_forecast",
+        "field": "confidence_score",
+        "old": "0.643",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "nexus_report",
+        "field": "velocity_30d",
+        "old": "1",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "nexus_report",
+        "field": "confidence_score",
+        "old": "0.647",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "notifier",
+        "field": "confidence_score",
+        "old": "0.710",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "orchestrator",
+        "field": "confidence_score",
+        "old": "0.710",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "psd_ingest",
+        "field": "velocity_30d",
+        "old": "4",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "psd_ingest",
+        "field": "confidence_score",
+        "old": "0.657",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "report_builder",
+        "field": "confidence_score",
+        "old": "0.710",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "research_rag",
+        "field": "confidence_score",
+        "old": "0.723",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "research_scout",
+        "field": "confidence_score",
+        "old": "0.710",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "sales_copilot",
+        "field": "confidence_score",
+        "old": "0.637",
+        "new": "0.500",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "satire_storyboard",
+        "field": "confidence_score",
+        "old": "0.710",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "social_sentiment",
+        "field": "confidence_score",
+        "old": "0.727",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "socio_fuse",
+        "field": "velocity_30d",
+        "old": "4",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "socio_fuse",
+        "field": "confidence_score",
+        "old": "0.657",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "trading_alpha",
+        "field": "confidence_score",
+        "old": "0.637",
+        "new": "0.500",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "ui_server",
+        "field": "confidence_score",
+        "old": "0.710",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "viz_dashboard",
+        "field": "velocity_7d",
+        "old": "1",
+        "new": "0",
+        "reason": "Commits count since window for code_path."
+      },
+      {
+        "agent_name": "viz_dashboard",
+        "field": "velocity_30d",
+        "old": "1",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "viz_dashboard",
+        "field": "confidence_score",
+        "old": "0.610",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      }
+    ],
+    "apply_requested": true,
+    "apply_metrics_requested": true,
+    "applied_core_count": 0,
+    "applied_metrics_count": 96,
+    "backup_path": "examples/AGENTS_TRACKER_BASE.csv.bak_20251215T185000Z"
+  },
+  "outputs": {
+    "json": "artifacts/dev_tracker/dev_tracker_20251215T185000Z.json",
+    "md": "reports/dev_tracker/dev_tracker_status.md",
+    "proposed_updates_core_csv": "artifacts/dev_tracker/proposed_updates_core_20251215T185000Z.csv",
+    "proposed_updates_metrics_csv": "artifacts/dev_tracker/proposed_updates_metrics_20251215T185000Z.csv"
+  }
+}

@@ -1,0 +1,889 @@
+{
+  "generated_utc": "2025-12-16T13:15:01Z",
+  "schema": "dev_tracker.v0.5",
+  "tracker": {
+    "path": "examples/AGENTS_TRACKER_BASE.csv",
+    "encoding_in": "utf-8-sig",
+    "delimiter_in": ";",
+    "rows": 20,
+    "columns_out": [
+      "office_id",
+      "office_nombre",
+      "agent_name",
+      "agent_type",
+      "estado",
+      "prioridad",
+      "layer",
+      "rol_play",
+      "repo_id",
+      "proposito_tecnico",
+      "potencial_comercial",
+      "inputs",
+      "outputs",
+      "pipelines_uso",
+      "tablas_db",
+      "data_sources",
+      "core_metrics",
+      "estado_dev",
+      "ultima_actualizacion",
+      "last_git_touch_utc",
+      "update_author",
+      "notas",
+      "code_path",
+      "dev_stream",
+      "quality_score",
+      "confidence_score",
+      "velocity_7d",
+      "velocity_30d",
+      "churn_30d",
+      "stability_days"
+    ],
+    "encoding_out": "utf-8-sig",
+    "delimiter_out": ";",
+    "repo_id": "devtracker-governance"
+  },
+  "git": {
+    "branch": "main",
+    "head": "aa69254f4e8758f1de94c75adc047e407caee21f",
+    "describe": "aa69254-dirty",
+    "requested_base_ref": "origin/main",
+    "base_ref": "origin/main",
+    "merge_base": "aa69254f4e8758f1de94c75adc047e407caee21f",
+    "dirty": true,
+    "status_porcelain": [
+      "M examples/AGENTS_TRACKER_BASE.csv"
+    ],
+    "diff_files": [],
+    "status_files": [
+      "xamples/AGENTS_TRACKER_BASE.csv"
+    ],
+    "all_changed_files": [
+      "xamples/AGENTS_TRACKER_BASE.csv"
+    ],
+    "diffstat": "",
+    "log_oneline": []
+  },
+  "quality_suite": {
+    "all_ok": true,
+    "quality_score": 1.0,
+    "pytest": {
+      "cmd": [
+        "C:\\Users\\eugen\\source\\repos\\agentesia\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "returncode": 0,
+      "ok": true
+    },
+    "ruff": {
+      "cmd": [
+        "C:\\Users\\eugen\\source\\repos\\agentesia\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "."
+      ],
+      "returncode": 0,
+      "ok": true
+    },
+    "mypy": {
+      "cmd": [
+        "C:\\Users\\eugen\\source\\repos\\agentesia\\.venv\\Scripts\\python.exe",
+        "-m",
+        "mypy",
+        "--config-file",
+        "mypy.ini",
+        "."
+      ],
+      "returncode": 0,
+      "ok": true
+    },
+    "stdout": {
+      "pytest": ".                                                                        [100%]\n1 passed in 0.03s",
+      "ruff": "All checks passed!",
+      "mypy": "Success: no issues found in 4 source files"
+    },
+    "stderr": {
+      "pytest": "",
+      "ruff": "",
+      "mypy": ""
+    }
+  },
+  "changes": {
+    "entities": {},
+    "counts": {
+      "agents_changed": 0,
+      "tools_changed": 0,
+      "apps_changed": 0
+    }
+  },
+  "policy": {
+    "core_updates_apply": false,
+    "metrics_updates_apply": false,
+    "author": "dev_tracker",
+    "windows": {
+      "journal_lookback_days": 60,
+      "metrics_days_short": 7,
+      "metrics_days_long": 30
+    }
+  },
+  "tracker_updates": {
+    "proposed_core": [],
+    "proposed_metrics": [
+      {
+        "agent_name": "agent_orchestrator_core",
+        "field": "quality_score",
+        "old": "",
+        "new": "1.000",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "agent_orchestrator_core",
+        "field": "velocity_7d",
+        "old": "",
+        "new": "0",
+        "reason": "Commits count since window for code_path."
+      },
+      {
+        "agent_name": "agent_orchestrator_core",
+        "field": "velocity_30d",
+        "old": "",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "agent_orchestrator_core",
+        "field": "churn_30d",
+        "old": "",
+        "new": "0.000",
+        "reason": "Proxy churn from journal per-agent updates (best-effort)."
+      },
+      {
+        "agent_name": "agent_orchestrator_core",
+        "field": "confidence_score",
+        "old": "",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "agent_policy_guard",
+        "field": "quality_score",
+        "old": "",
+        "new": "1.000",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "agent_policy_guard",
+        "field": "velocity_7d",
+        "old": "",
+        "new": "0",
+        "reason": "Commits count since window for code_path."
+      },
+      {
+        "agent_name": "agent_policy_guard",
+        "field": "velocity_30d",
+        "old": "",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "agent_policy_guard",
+        "field": "churn_30d",
+        "old": "",
+        "new": "0.000",
+        "reason": "Proxy churn from journal per-agent updates (best-effort)."
+      },
+      {
+        "agent_name": "agent_policy_guard",
+        "field": "confidence_score",
+        "old": "",
+        "new": "0.700",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "agent_tracker_sanitizer",
+        "field": "agent_type",
+        "old": "development",
+        "new": "observer",
+        "reason": "Heuristic classification: observer/executor/development."
+      },
+      {
+        "agent_name": "agent_tracker_sanitizer",
+        "field": "quality_score",
+        "old": "",
+        "new": "1.000",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "agent_tracker_sanitizer",
+        "field": "velocity_7d",
+        "old": "",
+        "new": "0",
+        "reason": "Commits count since window for code_path."
+      },
+      {
+        "agent_name": "agent_tracker_sanitizer",
+        "field": "velocity_30d",
+        "old": "",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "agent_tracker_sanitizer",
+        "field": "churn_30d",
+        "old": "",
+        "new": "0.000",
+        "reason": "Proxy churn from journal per-agent updates (best-effort)."
+      },
+      {
+        "agent_name": "agent_tracker_sanitizer",
+        "field": "confidence_score",
+        "old": "",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "agent_git_auditor",
+        "field": "agent_type",
+        "old": "development",
+        "new": "observer",
+        "reason": "Heuristic classification: observer/executor/development."
+      },
+      {
+        "agent_name": "agent_git_auditor",
+        "field": "quality_score",
+        "old": "",
+        "new": "1.000",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "agent_git_auditor",
+        "field": "velocity_7d",
+        "old": "",
+        "new": "0",
+        "reason": "Commits count since window for code_path."
+      },
+      {
+        "agent_name": "agent_git_auditor",
+        "field": "velocity_30d",
+        "old": "",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "agent_git_auditor",
+        "field": "churn_30d",
+        "old": "",
+        "new": "0.000",
+        "reason": "Proxy churn from journal per-agent updates (best-effort)."
+      },
+      {
+        "agent_name": "agent_git_auditor",
+        "field": "confidence_score",
+        "old": "",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "agent_quality_runner",
+        "field": "quality_score",
+        "old": "",
+        "new": "1.000",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "agent_quality_runner",
+        "field": "velocity_7d",
+        "old": "",
+        "new": "0",
+        "reason": "Commits count since window for code_path."
+      },
+      {
+        "agent_name": "agent_quality_runner",
+        "field": "velocity_30d",
+        "old": "",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "agent_quality_runner",
+        "field": "churn_30d",
+        "old": "",
+        "new": "0.000",
+        "reason": "Proxy churn from journal per-agent updates (best-effort)."
+      },
+      {
+        "agent_name": "agent_quality_runner",
+        "field": "confidence_score",
+        "old": "",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "agent_update_proposer",
+        "field": "agent_type",
+        "old": "development",
+        "new": "observer",
+        "reason": "Heuristic classification: observer/executor/development."
+      },
+      {
+        "agent_name": "agent_update_proposer",
+        "field": "quality_score",
+        "old": "",
+        "new": "1.000",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "agent_update_proposer",
+        "field": "velocity_7d",
+        "old": "",
+        "new": "0",
+        "reason": "Commits count since window for code_path."
+      },
+      {
+        "agent_name": "agent_update_proposer",
+        "field": "velocity_30d",
+        "old": "",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "agent_update_proposer",
+        "field": "churn_30d",
+        "old": "",
+        "new": "0.000",
+        "reason": "Proxy churn from journal per-agent updates (best-effort)."
+      },
+      {
+        "agent_name": "agent_update_proposer",
+        "field": "confidence_score",
+        "old": "",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "agent_update_applier",
+        "field": "agent_type",
+        "old": "development",
+        "new": "observer",
+        "reason": "Heuristic classification: observer/executor/development."
+      },
+      {
+        "agent_name": "agent_update_applier",
+        "field": "quality_score",
+        "old": "",
+        "new": "1.000",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "agent_update_applier",
+        "field": "velocity_7d",
+        "old": "",
+        "new": "0",
+        "reason": "Commits count since window for code_path."
+      },
+      {
+        "agent_name": "agent_update_applier",
+        "field": "velocity_30d",
+        "old": "",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "agent_update_applier",
+        "field": "churn_30d",
+        "old": "",
+        "new": "0.000",
+        "reason": "Proxy churn from journal per-agent updates (best-effort)."
+      },
+      {
+        "agent_name": "agent_update_applier",
+        "field": "confidence_score",
+        "old": "",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "agent_snapshot_api",
+        "field": "quality_score",
+        "old": "",
+        "new": "1.000",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "agent_snapshot_api",
+        "field": "velocity_7d",
+        "old": "",
+        "new": "0",
+        "reason": "Commits count since window for code_path."
+      },
+      {
+        "agent_name": "agent_snapshot_api",
+        "field": "velocity_30d",
+        "old": "",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "agent_snapshot_api",
+        "field": "churn_30d",
+        "old": "",
+        "new": "0.000",
+        "reason": "Proxy churn from journal per-agent updates (best-effort)."
+      },
+      {
+        "agent_name": "agent_snapshot_api",
+        "field": "confidence_score",
+        "old": "",
+        "new": "0.500",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "agent_dashboard_reporter",
+        "field": "quality_score",
+        "old": "",
+        "new": "1.000",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "agent_dashboard_reporter",
+        "field": "velocity_7d",
+        "old": "",
+        "new": "0",
+        "reason": "Commits count since window for code_path."
+      },
+      {
+        "agent_name": "agent_dashboard_reporter",
+        "field": "velocity_30d",
+        "old": "",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "agent_dashboard_reporter",
+        "field": "churn_30d",
+        "old": "",
+        "new": "0.000",
+        "reason": "Proxy churn from journal per-agent updates (best-effort)."
+      },
+      {
+        "agent_name": "agent_dashboard_reporter",
+        "field": "confidence_score",
+        "old": "",
+        "new": "0.500",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "agent_multi_repo_manager",
+        "field": "quality_score",
+        "old": "",
+        "new": "1.000",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "agent_multi_repo_manager",
+        "field": "velocity_7d",
+        "old": "",
+        "new": "0",
+        "reason": "Commits count since window for code_path."
+      },
+      {
+        "agent_name": "agent_multi_repo_manager",
+        "field": "velocity_30d",
+        "old": "",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "agent_multi_repo_manager",
+        "field": "churn_30d",
+        "old": "",
+        "new": "0.000",
+        "reason": "Proxy churn from journal per-agent updates (best-effort)."
+      },
+      {
+        "agent_name": "agent_multi_repo_manager",
+        "field": "confidence_score",
+        "old": "",
+        "new": "0.500",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "agent_toolcalling_adapter",
+        "field": "quality_score",
+        "old": "",
+        "new": "1.000",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "agent_toolcalling_adapter",
+        "field": "velocity_7d",
+        "old": "",
+        "new": "0",
+        "reason": "Commits count since window for code_path."
+      },
+      {
+        "agent_name": "agent_toolcalling_adapter",
+        "field": "velocity_30d",
+        "old": "",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "agent_toolcalling_adapter",
+        "field": "churn_30d",
+        "old": "",
+        "new": "0.000",
+        "reason": "Proxy churn from journal per-agent updates (best-effort)."
+      },
+      {
+        "agent_name": "agent_toolcalling_adapter",
+        "field": "confidence_score",
+        "old": "",
+        "new": "0.500",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "agent_change_classifier",
+        "field": "quality_score",
+        "old": "",
+        "new": "1.000",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "agent_change_classifier",
+        "field": "velocity_7d",
+        "old": "",
+        "new": "0",
+        "reason": "Commits count since window for code_path."
+      },
+      {
+        "agent_name": "agent_change_classifier",
+        "field": "velocity_30d",
+        "old": "",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "agent_change_classifier",
+        "field": "churn_30d",
+        "old": "",
+        "new": "0.000",
+        "reason": "Proxy churn from journal per-agent updates (best-effort)."
+      },
+      {
+        "agent_name": "agent_change_classifier",
+        "field": "confidence_score",
+        "old": "",
+        "new": "0.500",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "agent_release_gatekeeper",
+        "field": "quality_score",
+        "old": "",
+        "new": "1.000",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "agent_release_gatekeeper",
+        "field": "velocity_7d",
+        "old": "",
+        "new": "0",
+        "reason": "Commits count since window for code_path."
+      },
+      {
+        "agent_name": "agent_release_gatekeeper",
+        "field": "velocity_30d",
+        "old": "",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "agent_release_gatekeeper",
+        "field": "churn_30d",
+        "old": "",
+        "new": "0.000",
+        "reason": "Proxy churn from journal per-agent updates (best-effort)."
+      },
+      {
+        "agent_name": "agent_release_gatekeeper",
+        "field": "confidence_score",
+        "old": "",
+        "new": "0.500",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "agent_docs_sync",
+        "field": "quality_score",
+        "old": "",
+        "new": "1.000",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "agent_docs_sync",
+        "field": "velocity_7d",
+        "old": "",
+        "new": "0",
+        "reason": "Commits count since window for code_path."
+      },
+      {
+        "agent_name": "agent_docs_sync",
+        "field": "velocity_30d",
+        "old": "",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "agent_docs_sync",
+        "field": "churn_30d",
+        "old": "",
+        "new": "0.000",
+        "reason": "Proxy churn from journal per-agent updates (best-effort)."
+      },
+      {
+        "agent_name": "agent_docs_sync",
+        "field": "confidence_score",
+        "old": "",
+        "new": "0.500",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "agent_onboarding_assistant",
+        "field": "quality_score",
+        "old": "",
+        "new": "1.000",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "agent_onboarding_assistant",
+        "field": "velocity_7d",
+        "old": "",
+        "new": "0",
+        "reason": "Commits count since window for code_path."
+      },
+      {
+        "agent_name": "agent_onboarding_assistant",
+        "field": "velocity_30d",
+        "old": "",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "agent_onboarding_assistant",
+        "field": "churn_30d",
+        "old": "",
+        "new": "0.000",
+        "reason": "Proxy churn from journal per-agent updates (best-effort)."
+      },
+      {
+        "agent_name": "agent_onboarding_assistant",
+        "field": "confidence_score",
+        "old": "",
+        "new": "0.500",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "agent_security_redactor",
+        "field": "agent_type",
+        "old": "observer",
+        "new": "development",
+        "reason": "Heuristic classification: observer/executor/development."
+      },
+      {
+        "agent_name": "agent_security_redactor",
+        "field": "quality_score",
+        "old": "",
+        "new": "1.000",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "agent_security_redactor",
+        "field": "velocity_7d",
+        "old": "",
+        "new": "0",
+        "reason": "Commits count since window for code_path."
+      },
+      {
+        "agent_name": "agent_security_redactor",
+        "field": "velocity_30d",
+        "old": "",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "agent_security_redactor",
+        "field": "churn_30d",
+        "old": "",
+        "new": "0.000",
+        "reason": "Proxy churn from journal per-agent updates (best-effort)."
+      },
+      {
+        "agent_name": "agent_security_redactor",
+        "field": "confidence_score",
+        "old": "",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "agent_ci_packager",
+        "field": "quality_score",
+        "old": "",
+        "new": "1.000",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "agent_ci_packager",
+        "field": "velocity_7d",
+        "old": "",
+        "new": "0",
+        "reason": "Commits count since window for code_path."
+      },
+      {
+        "agent_name": "agent_ci_packager",
+        "field": "velocity_30d",
+        "old": "",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "agent_ci_packager",
+        "field": "churn_30d",
+        "old": "",
+        "new": "0.000",
+        "reason": "Proxy churn from journal per-agent updates (best-effort)."
+      },
+      {
+        "agent_name": "agent_ci_packager",
+        "field": "confidence_score",
+        "old": "",
+        "new": "0.500",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "agent_data_exporter",
+        "field": "quality_score",
+        "old": "",
+        "new": "1.000",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "agent_data_exporter",
+        "field": "velocity_7d",
+        "old": "",
+        "new": "0",
+        "reason": "Commits count since window for code_path."
+      },
+      {
+        "agent_name": "agent_data_exporter",
+        "field": "velocity_30d",
+        "old": "",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "agent_data_exporter",
+        "field": "churn_30d",
+        "old": "",
+        "new": "0.000",
+        "reason": "Proxy churn from journal per-agent updates (best-effort)."
+      },
+      {
+        "agent_name": "agent_data_exporter",
+        "field": "confidence_score",
+        "old": "",
+        "new": "0.500",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "agent_research_evaluator",
+        "field": "agent_type",
+        "old": "observer",
+        "new": "development",
+        "reason": "Heuristic classification: observer/executor/development."
+      },
+      {
+        "agent_name": "agent_research_evaluator",
+        "field": "quality_score",
+        "old": "",
+        "new": "1.000",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "agent_research_evaluator",
+        "field": "velocity_7d",
+        "old": "",
+        "new": "0",
+        "reason": "Commits count since window for code_path."
+      },
+      {
+        "agent_name": "agent_research_evaluator",
+        "field": "velocity_30d",
+        "old": "",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "agent_research_evaluator",
+        "field": "churn_30d",
+        "old": "",
+        "new": "0.000",
+        "reason": "Proxy churn from journal per-agent updates (best-effort)."
+      },
+      {
+        "agent_name": "agent_research_evaluator",
+        "field": "confidence_score",
+        "old": "",
+        "new": "0.500",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "agent_governance_spec_writer",
+        "field": "quality_score",
+        "old": "",
+        "new": "1.000",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "agent_governance_spec_writer",
+        "field": "velocity_7d",
+        "old": "",
+        "new": "0",
+        "reason": "Commits count since window for code_path."
+      },
+      {
+        "agent_name": "agent_governance_spec_writer",
+        "field": "velocity_30d",
+        "old": "",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "agent_governance_spec_writer",
+        "field": "churn_30d",
+        "old": "",
+        "new": "0.000",
+        "reason": "Proxy churn from journal per-agent updates (best-effort)."
+      },
+      {
+        "agent_name": "agent_governance_spec_writer",
+        "field": "confidence_score",
+        "old": "",
+        "new": "0.600",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      }
+    ],
+    "apply_requested": false,
+    "apply_metrics_requested": false,
+    "applied_core_count": 0,
+    "applied_metrics_count": 0,
+    "backup_path": ""
+  },
+  "outputs": {
+    "json": "artifacts/dev_tracker/dev_tracker_20251216T131501Z.json",
+    "md": "reports/dev_tracker/dev_tracker_status.md",
+    "proposed_updates_core_csv": "artifacts/dev_tracker/proposed_updates_core_20251216T131501Z.csv",
+    "proposed_updates_metrics_csv": "artifacts/dev_tracker/proposed_updates_metrics_20251216T131501Z.csv"
+  }
+}

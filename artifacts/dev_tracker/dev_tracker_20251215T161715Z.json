@@ -1,0 +1,1975 @@
+{
+  "generated_utc": "2025-12-15T16:17:15Z",
+  "schema": "dev_tracker.v0.5",
+  "tracker": {
+    "path": "examples/AGENTS_TRACKER_BASE.csv",
+    "encoding_in": "utf-8-sig",
+    "delimiter_in": ";",
+    "rows": 115,
+    "columns_out": [
+      "office_id",
+      "office_nombre",
+      "agent_name",
+      "agent_type",
+      "estado",
+      "prioridad",
+      "layer",
+      "rol_play",
+      "repo_id",
+      "proposito_tecnico",
+      "potencial_comercial",
+      "inputs",
+      "outputs",
+      "pipelines_uso",
+      "tablas_db",
+      "data_sources",
+      "core_metrics",
+      "estado_dev",
+      "ultima_actualizacion",
+      "last_git_touch_utc",
+      "update_author",
+      "notas",
+      "code_path",
+      "dev_stream",
+      "quality_score",
+      "confidence_score",
+      "velocity_7d",
+      "velocity_30d",
+      "churn_30d",
+      "stability_days"
+    ],
+    "encoding_out": "utf-8-sig",
+    "delimiter_out": ";",
+    "repo_id": "devtracker-governance"
+  },
+  "git": {
+    "branch": "main",
+    "head": "34e8db90a640518034807b26e7cdcbf1abcb9b89",
+    "describe": "34e8db9",
+    "requested_base_ref": "origin/main",
+    "base_ref": "origin/main",
+    "merge_base": "34e8db90a640518034807b26e7cdcbf1abcb9b89",
+    "dirty": false,
+    "status_porcelain": [],
+    "diff_files": [],
+    "status_files": [],
+    "all_changed_files": [],
+    "diffstat": "",
+    "log_oneline": []
+  },
+  "quality_suite": {
+    "all_ok": false,
+    "quality_score": 0.6666666666666666,
+    "pytest": {
+      "cmd": [
+        "C:\\Users\\eugen\\source\\repos\\devtracker-governance\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "returncode": 5,
+      "ok": false
+    },
+    "ruff": {
+      "cmd": [
+        "C:\\Users\\eugen\\source\\repos\\devtracker-governance\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "."
+      ],
+      "returncode": 0,
+      "ok": true
+    },
+    "mypy": {
+      "cmd": [
+        "C:\\Users\\eugen\\source\\repos\\devtracker-governance\\.venv\\Scripts\\python.exe",
+        "-m",
+        "mypy",
+        "--config-file",
+        "mypy.ini",
+        "."
+      ],
+      "returncode": 0,
+      "ok": true
+    },
+    "stdout": {
+      "pytest": "no tests ran in 0.02s",
+      "ruff": "All checks passed!",
+      "mypy": "Success: no issues found in 3 source files"
+    },
+    "stderr": {
+      "pytest": "",
+      "ruff": "",
+      "mypy": ""
+    }
+  },
+  "changes": {
+    "entities": {},
+    "counts": {
+      "agents_changed": 0,
+      "tools_changed": 0,
+      "apps_changed": 0
+    }
+  },
+  "policy": {
+    "core_updates_apply": false,
+    "metrics_updates_apply": false,
+    "author": "dev_tracker",
+    "windows": {
+      "journal_lookback_days": 60,
+      "metrics_days_short": 7,
+      "metrics_days_long": 30
+    }
+  },
+  "tracker_updates": {
+    "proposed_core": [],
+    "proposed_metrics": [
+      {
+        "agent_name": "agro_climate_yields",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "agro_climate_yields",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "andino_catalog (genï¿½?ï¿½ï¿½ï¿½ï¿½rico)",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "andino_catalog (genï¿½?ï¿½ï¿½ï¿½ï¿½rico)",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "api_server",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "api_server",
+        "field": "confidence_score",
+        "old": "0.713",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "astro_bot",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "astro_bot",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "auto_pipeline_recommender",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "auto_pipeline_recommender",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "auto_reader",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "auto_reader",
+        "field": "confidence_score",
+        "old": "0.723",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "auto_reader (ya listado)",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "auto_reader (ya listado)",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "bot_list",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "bot_list",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "bot_promote",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "bot_promote",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "bot_to_auto_ml",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "bot_to_auto_ml",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "bot_to_auto_ml_universe",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "bot_to_auto_ml_universe",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "bot_trainer",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "bot_trainer",
+        "field": "confidence_score",
+        "old": "0.703",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "calendar_ops",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "calendar_ops",
+        "field": "confidence_score",
+        "old": "0.637",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "cdc_builder",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "cdc_builder",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "cdc_index",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "cdc_index",
+        "field": "velocity_30d",
+        "old": "1",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "cdc_index",
+        "field": "confidence_score",
+        "old": "0.647",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "cdc_prices",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "cdc_prices",
+        "field": "velocity_30d",
+        "old": "1",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "cdc_prices",
+        "field": "confidence_score",
+        "old": "0.647",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "cdc_telecom",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "cdc_telecom",
+        "field": "velocity_30d",
+        "old": "1",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "cdc_telecom",
+        "field": "confidence_score",
+        "old": "0.647",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "crypto_autotrader",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "crypto_autotrader",
+        "field": "confidence_score",
+        "old": "0.703",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "crypto_backtest",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "crypto_backtest",
+        "field": "confidence_score",
+        "old": "0.710",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "crypto_backtest_daily (pipeline)",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "crypto_backtest_daily (pipeline)",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "crypto_competitor",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "crypto_competitor",
+        "field": "confidence_score",
+        "old": "0.703",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "crypto_factsheet",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "crypto_factsheet",
+        "field": "confidence_score",
+        "old": "0.710",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "crypto_replay",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "crypto_replay",
+        "field": "confidence_score",
+        "old": "0.710",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "crypto_signals",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "crypto_signals",
+        "field": "confidence_score",
+        "old": "0.713",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "crypto_signals_batch",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "crypto_signals_batch",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "crypto_signals_live",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "crypto_signals_live",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "crypto_trader",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "crypto_trader",
+        "field": "confidence_score",
+        "old": "0.710",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "csv_ingestor (csv_agent)",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "csv_ingestor (csv_agent)",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "data_exporter",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "data_exporter",
+        "field": "confidence_score",
+        "old": "0.710",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "data_lake_loader",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "data_lake_loader",
+        "field": "velocity_7d",
+        "old": "3",
+        "new": "0",
+        "reason": "Commits count since window for code_path."
+      },
+      {
+        "agent_name": "data_lake_loader",
+        "field": "velocity_30d",
+        "old": "3",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "data_lake_loader",
+        "field": "confidence_score",
+        "old": "0.620",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "data_quality_monitor",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "data_quality_monitor",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "dataset_builder",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "dataset_builder",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "dataset_cleaner",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "dataset_cleaner",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "dataset_labeler_auto",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "dataset_labeler_auto",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "dataset_labeler_human_loop",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "dataset_labeler_human_loop",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "dataset_mining_prospects",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "dataset_mining_prospects",
+        "field": "confidence_score",
+        "old": "0.600",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "dataset_publisher",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "dataset_publisher",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "dataset_registry",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "dataset_registry",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "dataset_synthesizer",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "dataset_synthesizer",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "deal_desk",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "deal_desk",
+        "field": "confidence_score",
+        "old": "0.710",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "design_comms",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "design_comms",
+        "field": "confidence_score",
+        "old": "0.637",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "dev_tracker",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "dev_tracker",
+        "field": "velocity_7d",
+        "old": "3",
+        "new": "0",
+        "reason": "Commits count since window for code_path."
+      },
+      {
+        "agent_name": "dev_tracker",
+        "field": "velocity_30d",
+        "old": "3",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "dev_tracker",
+        "field": "confidence_score",
+        "old": "0.613",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "digital_poverty",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "digital_poverty",
+        "field": "velocity_30d",
+        "old": "4",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "digital_poverty",
+        "field": "confidence_score",
+        "old": "0.657",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "editorial",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "editorial",
+        "field": "velocity_30d",
+        "old": "2",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "editorial",
+        "field": "confidence_score",
+        "old": "0.640",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "editorial_curator",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "editorial_curator",
+        "field": "confidence_score",
+        "old": "0.710",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "email_ops",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "email_ops",
+        "field": "confidence_score",
+        "old": "0.637",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "energy_data_refresh",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "energy_data_refresh",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "eph_etl",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "eph_etl",
+        "field": "velocity_30d",
+        "old": "1",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "eph_etl",
+        "field": "confidence_score",
+        "old": "0.647",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "eph_ingestor",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "eph_ingestor",
+        "field": "velocity_30d",
+        "old": "1",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "eph_ingestor",
+        "field": "confidence_score",
+        "old": "0.647",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "eph_unify",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "eph_unify",
+        "field": "velocity_30d",
+        "old": "1",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "eph_unify",
+        "field": "confidence_score",
+        "old": "0.647",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "feature_store_manager",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "feature_store_manager",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "geo_mining_analyzer",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "geo_mining_analyzer",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "github_ci",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "github_ci",
+        "field": "confidence_score",
+        "old": "0.637",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "governor",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "governor",
+        "field": "velocity_30d",
+        "old": "1",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "governor",
+        "field": "confidence_score",
+        "old": "0.640",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "indec_catalog",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "indec_catalog",
+        "field": "velocity_30d",
+        "old": "1",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "indec_catalog",
+        "field": "confidence_score",
+        "old": "0.637",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "indec_download",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "indec_download",
+        "field": "velocity_30d",
+        "old": "1",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "indec_download",
+        "field": "confidence_score",
+        "old": "0.537",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "init_master_db",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "init_master_db",
+        "field": "velocity_30d",
+        "old": "1",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "init_master_db",
+        "field": "confidence_score",
+        "old": "0.533",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "integrator",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "integrator",
+        "field": "velocity_30d",
+        "old": "1",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "integrator",
+        "field": "confidence_score",
+        "old": "0.647",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "ipc_builder (ipc_index)",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "ipc_builder (ipc_index)",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "ipc_nowcaster",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "ipc_nowcaster",
+        "field": "confidence_score",
+        "old": "0.710",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "keyword_alerts",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "keyword_alerts",
+        "field": "confidence_score",
+        "old": "0.710",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "kpi_global",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "kpi_global",
+        "field": "velocity_30d",
+        "old": "1",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "kpi_global",
+        "field": "confidence_score",
+        "old": "0.640",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "kpi_monitor",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "kpi_monitor",
+        "field": "confidence_score",
+        "old": "0.710",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "label_policy_manager",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "label_policy_manager",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "labor_data_refresh",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "labor_data_refresh",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "legal_rwa",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "legal_rwa",
+        "field": "confidence_score",
+        "old": "0.637",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "loader_cdc",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "loader_cdc",
+        "field": "velocity_30d",
+        "old": "1",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "loader_cdc",
+        "field": "confidence_score",
+        "old": "0.533",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "loader_crypto",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "loader_crypto",
+        "field": "velocity_30d",
+        "old": "1",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "loader_crypto",
+        "field": "confidence_score",
+        "old": "0.533",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "loader_eph",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "loader_eph",
+        "field": "velocity_30d",
+        "old": "1",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "loader_eph",
+        "field": "confidence_score",
+        "old": "0.533",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "loader_indec",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "loader_indec",
+        "field": "velocity_30d",
+        "old": "1",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "loader_indec",
+        "field": "confidence_score",
+        "old": "0.533",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "loader_nexus",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "loader_nexus",
+        "field": "velocity_30d",
+        "old": "1",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "loader_nexus",
+        "field": "confidence_score",
+        "old": "0.533",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "loader_rss",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "loader_rss",
+        "field": "velocity_30d",
+        "old": "1",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "loader_rss",
+        "field": "confidence_score",
+        "old": "0.533",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "macro_data_refresh",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "macro_data_refresh",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "macro_forecaster",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "macro_forecaster",
+        "field": "confidence_score",
+        "old": "0.710",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "macro_watcher",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "macro_watcher",
+        "field": "confidence_score",
+        "old": "0.730",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "market_scraper",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "market_scraper",
+        "field": "confidence_score",
+        "old": "0.713",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "master_schema.sql",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "master_schema.sql",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "mining_data_refresh",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "mining_data_refresh",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "mining_intel",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "mining_intel",
+        "field": "confidence_score",
+        "old": "0.737",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "model_drift_monitor",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "model_drift_monitor",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "model_evaluator",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "model_evaluator",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "ner_enricher (ner)",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "ner_enricher (ner)",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "nexus_brief",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "nexus_brief",
+        "field": "velocity_30d",
+        "old": "1",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "nexus_brief",
+        "field": "confidence_score",
+        "old": "0.647",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "nexus_cluster",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "nexus_cluster",
+        "field": "velocity_30d",
+        "old": "2",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "nexus_cluster",
+        "field": "confidence_score",
+        "old": "0.643",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "nexus_forecast",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "nexus_forecast",
+        "field": "velocity_30d",
+        "old": "2",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "nexus_forecast",
+        "field": "confidence_score",
+        "old": "0.643",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "nexus_report",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "nexus_report",
+        "field": "velocity_30d",
+        "old": "1",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "nexus_report",
+        "field": "confidence_score",
+        "old": "0.647",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "notifier",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "notifier",
+        "field": "confidence_score",
+        "old": "0.710",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "ohlcv_fetch",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "ohlcv_fetch",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "openclose_reporter (openclose)",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "openclose_reporter (openclose)",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "orchestrator",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "orchestrator",
+        "field": "confidence_score",
+        "old": "0.710",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "pipeline_profiler",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "pipeline_profiler",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "population_data_refresh",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "population_data_refresh",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "production_data_refresh",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "production_data_refresh",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "prompt_guru (guru)",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "prompt_guru (guru)",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "prompt_publisher (publish)",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "prompt_publisher (publish)",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "psd_ingest",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "psd_ingest",
+        "field": "velocity_30d",
+        "old": "4",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "psd_ingest",
+        "field": "confidence_score",
+        "old": "0.657",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "report_builder",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "report_builder",
+        "field": "confidence_score",
+        "old": "0.710",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "research_rag",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "research_rag",
+        "field": "confidence_score",
+        "old": "0.723",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "research_rag (ya listado)",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "research_rag (ya listado)",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "research_scout",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "research_scout",
+        "field": "confidence_score",
+        "old": "0.710",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "rss_ingestor (rss_agent)",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "rss_ingestor (rss_agent)",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "sales_copilot",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "sales_copilot",
+        "field": "confidence_score",
+        "old": "0.637",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "satire_storyboard",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "satire_storyboard",
+        "field": "confidence_score",
+        "old": "0.710",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "segemar_catalog",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "segemar_catalog",
+        "field": "confidence_score",
+        "old": "0.600",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "segemar_geo_loader",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "segemar_geo_loader",
+        "field": "confidence_score",
+        "old": "0.600",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "sentiment_analyzer (sentiment)",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "sentiment_analyzer (sentiment)",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "series_downloader",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "series_downloader",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "series_vitality_score",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "series_vitality_score",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "social_sentiment",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "social_sentiment",
+        "field": "confidence_score",
+        "old": "0.727",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "socio_fuse",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "socio_fuse",
+        "field": "velocity_30d",
+        "old": "4",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "socio_fuse",
+        "field": "confidence_score",
+        "old": "0.657",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "topic_tagger (topics)",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "topic_tagger (topics)",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "trading_alpha",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "trading_alpha",
+        "field": "confidence_score",
+        "old": "0.637",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "trend_detector (trends)",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "trend_detector (trends)",
+        "field": "confidence_score",
+        "old": "0.500",
+        "new": "0.333",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "ui_server",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "ui_server",
+        "field": "confidence_score",
+        "old": "0.710",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      },
+      {
+        "agent_name": "viz_dashboard",
+        "field": "quality_score",
+        "old": "1.000",
+        "new": "0.667",
+        "reason": "Quality suite score (repo-level) written as baseline evidence."
+      },
+      {
+        "agent_name": "viz_dashboard",
+        "field": "velocity_7d",
+        "old": "1",
+        "new": "0",
+        "reason": "Commits count since window for code_path."
+      },
+      {
+        "agent_name": "viz_dashboard",
+        "field": "velocity_30d",
+        "old": "1",
+        "new": "0",
+        "reason": "Commits count since long window for code_path."
+      },
+      {
+        "agent_name": "viz_dashboard",
+        "field": "confidence_score",
+        "old": "0.610",
+        "new": "0.433",
+        "reason": "Composite confidence from quality+maturity+stability+velocity-churn."
+      }
+    ],
+    "apply_requested": false,
+    "apply_metrics_requested": false,
+    "applied_core_count": 0,
+    "applied_metrics_count": 0,
+    "backup_path": ""
+  },
+  "outputs": {
+    "json": "artifacts/dev_tracker/dev_tracker_20251215T161715Z.json",
+    "md": "reports/dev_tracker/dev_tracker_status.md",
+    "proposed_updates_core_csv": "artifacts/dev_tracker/proposed_updates_core_20251215T161715Z.csv",
+    "proposed_updates_metrics_csv": "artifacts/dev_tracker/proposed_updates_metrics_20251215T161715Z.csv"
+  }
+}

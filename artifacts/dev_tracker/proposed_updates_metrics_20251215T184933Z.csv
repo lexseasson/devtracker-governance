@@ -1,0 +1,97 @@
+agent_name,field,old,new,reason
+api_server,confidence_score,0.713,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+auto_reader,confidence_score,0.723,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+bot_trainer,confidence_score,0.703,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+calendar_ops,confidence_score,0.637,0.500,Composite confidence from quality+maturity+stability+velocity-churn.
+cdc_index,velocity_30d,1,0,Commits count since long window for code_path.
+cdc_index,confidence_score,0.647,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+cdc_prices,velocity_30d,1,0,Commits count since long window for code_path.
+cdc_prices,confidence_score,0.647,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+cdc_telecom,velocity_30d,1,0,Commits count since long window for code_path.
+cdc_telecom,confidence_score,0.647,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+crypto_autotrader,confidence_score,0.703,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+crypto_backtest,confidence_score,0.710,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+crypto_competitor,confidence_score,0.703,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+crypto_factsheet,confidence_score,0.710,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+crypto_replay,confidence_score,0.710,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+crypto_signals,confidence_score,0.713,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+crypto_trader,confidence_score,0.710,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+data_exporter,confidence_score,0.710,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+data_lake_loader,velocity_7d,3,0,Commits count since window for code_path.
+data_lake_loader,velocity_30d,3,0,Commits count since long window for code_path.
+data_lake_loader,confidence_score,0.620,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+deal_desk,confidence_score,0.710,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+design_comms,confidence_score,0.637,0.500,Composite confidence from quality+maturity+stability+velocity-churn.
+dev_tracker,velocity_7d,3,0,Commits count since window for code_path.
+dev_tracker,velocity_30d,3,0,Commits count since long window for code_path.
+dev_tracker,confidence_score,0.613,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+digital_poverty,velocity_30d,4,0,Commits count since long window for code_path.
+digital_poverty,confidence_score,0.657,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+editorial,velocity_30d,2,0,Commits count since long window for code_path.
+editorial,confidence_score,0.640,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+editorial_curator,confidence_score,0.710,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+email_ops,confidence_score,0.637,0.500,Composite confidence from quality+maturity+stability+velocity-churn.
+eph_etl,velocity_30d,1,0,Commits count since long window for code_path.
+eph_etl,confidence_score,0.647,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+eph_ingestor,velocity_30d,1,0,Commits count since long window for code_path.
+eph_ingestor,confidence_score,0.647,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+eph_unify,velocity_30d,1,0,Commits count since long window for code_path.
+eph_unify,confidence_score,0.647,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+github_ci,confidence_score,0.637,0.500,Composite confidence from quality+maturity+stability+velocity-churn.
+governor,velocity_30d,1,0,Commits count since long window for code_path.
+governor,confidence_score,0.640,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+indec_catalog,velocity_30d,1,0,Commits count since long window for code_path.
+indec_catalog,confidence_score,0.637,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+indec_download,velocity_30d,1,0,Commits count since long window for code_path.
+indec_download,confidence_score,0.537,0.500,Composite confidence from quality+maturity+stability+velocity-churn.
+init_master_db,velocity_30d,1,0,Commits count since long window for code_path.
+init_master_db,confidence_score,0.533,0.500,Composite confidence from quality+maturity+stability+velocity-churn.
+integrator,velocity_30d,1,0,Commits count since long window for code_path.
+integrator,confidence_score,0.647,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+ipc_nowcaster,confidence_score,0.710,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+keyword_alerts,confidence_score,0.710,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+kpi_global,velocity_30d,1,0,Commits count since long window for code_path.
+kpi_global,confidence_score,0.640,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+kpi_monitor,confidence_score,0.710,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+legal_rwa,confidence_score,0.637,0.500,Composite confidence from quality+maturity+stability+velocity-churn.
+loader_cdc,velocity_30d,1,0,Commits count since long window for code_path.
+loader_cdc,confidence_score,0.533,0.500,Composite confidence from quality+maturity+stability+velocity-churn.
+loader_crypto,velocity_30d,1,0,Commits count since long window for code_path.
+loader_crypto,confidence_score,0.533,0.500,Composite confidence from quality+maturity+stability+velocity-churn.
+loader_eph,velocity_30d,1,0,Commits count since long window for code_path.
+loader_eph,confidence_score,0.533,0.500,Composite confidence from quality+maturity+stability+velocity-churn.
+loader_indec,velocity_30d,1,0,Commits count since long window for code_path.
+loader_indec,confidence_score,0.533,0.500,Composite confidence from quality+maturity+stability+velocity-churn.
+loader_nexus,velocity_30d,1,0,Commits count since long window for code_path.
+loader_nexus,confidence_score,0.533,0.500,Composite confidence from quality+maturity+stability+velocity-churn.
+loader_rss,velocity_30d,1,0,Commits count since long window for code_path.
+loader_rss,confidence_score,0.533,0.500,Composite confidence from quality+maturity+stability+velocity-churn.
+macro_forecaster,confidence_score,0.710,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+macro_watcher,confidence_score,0.730,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+market_scraper,confidence_score,0.713,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+mining_intel,confidence_score,0.737,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+nexus_brief,velocity_30d,1,0,Commits count since long window for code_path.
+nexus_brief,confidence_score,0.647,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+nexus_cluster,velocity_30d,2,0,Commits count since long window for code_path.
+nexus_cluster,confidence_score,0.643,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+nexus_forecast,velocity_30d,2,0,Commits count since long window for code_path.
+nexus_forecast,confidence_score,0.643,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+nexus_report,velocity_30d,1,0,Commits count since long window for code_path.
+nexus_report,confidence_score,0.647,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+notifier,confidence_score,0.710,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+orchestrator,confidence_score,0.710,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+psd_ingest,velocity_30d,4,0,Commits count since long window for code_path.
+psd_ingest,confidence_score,0.657,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+report_builder,confidence_score,0.710,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+research_rag,confidence_score,0.723,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+research_scout,confidence_score,0.710,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+sales_copilot,confidence_score,0.637,0.500,Composite confidence from quality+maturity+stability+velocity-churn.
+satire_storyboard,confidence_score,0.710,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+social_sentiment,confidence_score,0.727,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+socio_fuse,velocity_30d,4,0,Commits count since long window for code_path.
+socio_fuse,confidence_score,0.657,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+trading_alpha,confidence_score,0.637,0.500,Composite confidence from quality+maturity+stability+velocity-churn.
+ui_server,confidence_score,0.710,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+viz_dashboard,velocity_7d,1,0,Commits count since window for code_path.
+viz_dashboard,velocity_30d,1,0,Commits count since long window for code_path.
+viz_dashboard,confidence_score,0.610,0.600,Composite confidence from quality+maturity+stability+velocity-churn.

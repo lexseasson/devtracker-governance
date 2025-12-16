@@ -1,0 +1,107 @@
+agent_name,field,old,new,reason
+agent_orchestrator_core,quality_score,,1.000,Quality suite score (repo-level) written as baseline evidence.
+agent_orchestrator_core,velocity_7d,,0,Commits count since window for code_path.
+agent_orchestrator_core,velocity_30d,,0,Commits count since long window for code_path.
+agent_orchestrator_core,churn_30d,,0.000,Proxy churn from journal per-agent updates (best-effort).
+agent_orchestrator_core,confidence_score,,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+agent_policy_guard,quality_score,,1.000,Quality suite score (repo-level) written as baseline evidence.
+agent_policy_guard,velocity_7d,,0,Commits count since window for code_path.
+agent_policy_guard,velocity_30d,,0,Commits count since long window for code_path.
+agent_policy_guard,churn_30d,,0.000,Proxy churn from journal per-agent updates (best-effort).
+agent_policy_guard,confidence_score,,0.700,Composite confidence from quality+maturity+stability+velocity-churn.
+agent_tracker_sanitizer,agent_type,development,observer,Heuristic classification: observer/executor/development.
+agent_tracker_sanitizer,quality_score,,1.000,Quality suite score (repo-level) written as baseline evidence.
+agent_tracker_sanitizer,velocity_7d,,0,Commits count since window for code_path.
+agent_tracker_sanitizer,velocity_30d,,0,Commits count since long window for code_path.
+agent_tracker_sanitizer,churn_30d,,0.000,Proxy churn from journal per-agent updates (best-effort).
+agent_tracker_sanitizer,confidence_score,,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+agent_git_auditor,agent_type,development,observer,Heuristic classification: observer/executor/development.
+agent_git_auditor,quality_score,,1.000,Quality suite score (repo-level) written as baseline evidence.
+agent_git_auditor,velocity_7d,,0,Commits count since window for code_path.
+agent_git_auditor,velocity_30d,,0,Commits count since long window for code_path.
+agent_git_auditor,churn_30d,,0.000,Proxy churn from journal per-agent updates (best-effort).
+agent_git_auditor,confidence_score,,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+agent_quality_runner,quality_score,,1.000,Quality suite score (repo-level) written as baseline evidence.
+agent_quality_runner,velocity_7d,,0,Commits count since window for code_path.
+agent_quality_runner,velocity_30d,,0,Commits count since long window for code_path.
+agent_quality_runner,churn_30d,,0.000,Proxy churn from journal per-agent updates (best-effort).
+agent_quality_runner,confidence_score,,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+agent_update_proposer,agent_type,development,observer,Heuristic classification: observer/executor/development.
+agent_update_proposer,quality_score,,1.000,Quality suite score (repo-level) written as baseline evidence.
+agent_update_proposer,velocity_7d,,0,Commits count since window for code_path.
+agent_update_proposer,velocity_30d,,0,Commits count since long window for code_path.
+agent_update_proposer,churn_30d,,0.000,Proxy churn from journal per-agent updates (best-effort).
+agent_update_proposer,confidence_score,,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+agent_update_applier,agent_type,development,observer,Heuristic classification: observer/executor/development.
+agent_update_applier,quality_score,,1.000,Quality suite score (repo-level) written as baseline evidence.
+agent_update_applier,velocity_7d,,0,Commits count since window for code_path.
+agent_update_applier,velocity_30d,,0,Commits count since long window for code_path.
+agent_update_applier,churn_30d,,0.000,Proxy churn from journal per-agent updates (best-effort).
+agent_update_applier,confidence_score,,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+agent_snapshot_api,quality_score,,1.000,Quality suite score (repo-level) written as baseline evidence.
+agent_snapshot_api,velocity_7d,,0,Commits count since window for code_path.
+agent_snapshot_api,velocity_30d,,0,Commits count since long window for code_path.
+agent_snapshot_api,churn_30d,,0.000,Proxy churn from journal per-agent updates (best-effort).
+agent_snapshot_api,confidence_score,,0.500,Composite confidence from quality+maturity+stability+velocity-churn.
+agent_dashboard_reporter,quality_score,,1.000,Quality suite score (repo-level) written as baseline evidence.
+agent_dashboard_reporter,velocity_7d,,0,Commits count since window for code_path.
+agent_dashboard_reporter,velocity_30d,,0,Commits count since long window for code_path.
+agent_dashboard_reporter,churn_30d,,0.000,Proxy churn from journal per-agent updates (best-effort).
+agent_dashboard_reporter,confidence_score,,0.500,Composite confidence from quality+maturity+stability+velocity-churn.
+agent_multi_repo_manager,quality_score,,1.000,Quality suite score (repo-level) written as baseline evidence.
+agent_multi_repo_manager,velocity_7d,,0,Commits count since window for code_path.
+agent_multi_repo_manager,velocity_30d,,0,Commits count since long window for code_path.
+agent_multi_repo_manager,churn_30d,,0.000,Proxy churn from journal per-agent updates (best-effort).
+agent_multi_repo_manager,confidence_score,,0.500,Composite confidence from quality+maturity+stability+velocity-churn.
+agent_toolcalling_adapter,quality_score,,1.000,Quality suite score (repo-level) written as baseline evidence.
+agent_toolcalling_adapter,velocity_7d,,0,Commits count since window for code_path.
+agent_toolcalling_adapter,velocity_30d,,0,Commits count since long window for code_path.
+agent_toolcalling_adapter,churn_30d,,0.000,Proxy churn from journal per-agent updates (best-effort).
+agent_toolcalling_adapter,confidence_score,,0.500,Composite confidence from quality+maturity+stability+velocity-churn.
+agent_change_classifier,quality_score,,1.000,Quality suite score (repo-level) written as baseline evidence.
+agent_change_classifier,velocity_7d,,0,Commits count since window for code_path.
+agent_change_classifier,velocity_30d,,0,Commits count since long window for code_path.
+agent_change_classifier,churn_30d,,0.000,Proxy churn from journal per-agent updates (best-effort).
+agent_change_classifier,confidence_score,,0.500,Composite confidence from quality+maturity+stability+velocity-churn.
+agent_release_gatekeeper,quality_score,,1.000,Quality suite score (repo-level) written as baseline evidence.
+agent_release_gatekeeper,velocity_7d,,0,Commits count since window for code_path.
+agent_release_gatekeeper,velocity_30d,,0,Commits count since long window for code_path.
+agent_release_gatekeeper,churn_30d,,0.000,Proxy churn from journal per-agent updates (best-effort).
+agent_release_gatekeeper,confidence_score,,0.500,Composite confidence from quality+maturity+stability+velocity-churn.
+agent_docs_sync,quality_score,,1.000,Quality suite score (repo-level) written as baseline evidence.
+agent_docs_sync,velocity_7d,,0,Commits count since window for code_path.
+agent_docs_sync,velocity_30d,,0,Commits count since long window for code_path.
+agent_docs_sync,churn_30d,,0.000,Proxy churn from journal per-agent updates (best-effort).
+agent_docs_sync,confidence_score,,0.500,Composite confidence from quality+maturity+stability+velocity-churn.
+agent_onboarding_assistant,quality_score,,1.000,Quality suite score (repo-level) written as baseline evidence.
+agent_onboarding_assistant,velocity_7d,,0,Commits count since window for code_path.
+agent_onboarding_assistant,velocity_30d,,0,Commits count since long window for code_path.
+agent_onboarding_assistant,churn_30d,,0.000,Proxy churn from journal per-agent updates (best-effort).
+agent_onboarding_assistant,confidence_score,,0.500,Composite confidence from quality+maturity+stability+velocity-churn.
+agent_security_redactor,agent_type,observer,development,Heuristic classification: observer/executor/development.
+agent_security_redactor,quality_score,,1.000,Quality suite score (repo-level) written as baseline evidence.
+agent_security_redactor,velocity_7d,,0,Commits count since window for code_path.
+agent_security_redactor,velocity_30d,,0,Commits count since long window for code_path.
+agent_security_redactor,churn_30d,,0.000,Proxy churn from journal per-agent updates (best-effort).
+agent_security_redactor,confidence_score,,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
+agent_ci_packager,quality_score,,1.000,Quality suite score (repo-level) written as baseline evidence.
+agent_ci_packager,velocity_7d,,0,Commits count since window for code_path.
+agent_ci_packager,velocity_30d,,0,Commits count since long window for code_path.
+agent_ci_packager,churn_30d,,0.000,Proxy churn from journal per-agent updates (best-effort).
+agent_ci_packager,confidence_score,,0.500,Composite confidence from quality+maturity+stability+velocity-churn.
+agent_data_exporter,quality_score,,1.000,Quality suite score (repo-level) written as baseline evidence.
+agent_data_exporter,velocity_7d,,0,Commits count since window for code_path.
+agent_data_exporter,velocity_30d,,0,Commits count since long window for code_path.
+agent_data_exporter,churn_30d,,0.000,Proxy churn from journal per-agent updates (best-effort).
+agent_data_exporter,confidence_score,,0.500,Composite confidence from quality+maturity+stability+velocity-churn.
+agent_research_evaluator,agent_type,observer,development,Heuristic classification: observer/executor/development.
+agent_research_evaluator,quality_score,,1.000,Quality suite score (repo-level) written as baseline evidence.
+agent_research_evaluator,velocity_7d,,0,Commits count since window for code_path.
+agent_research_evaluator,velocity_30d,,0,Commits count since long window for code_path.
+agent_research_evaluator,churn_30d,,0.000,Proxy churn from journal per-agent updates (best-effort).
+agent_research_evaluator,confidence_score,,0.500,Composite confidence from quality+maturity+stability+velocity-churn.
+agent_governance_spec_writer,quality_score,,1.000,Quality suite score (repo-level) written as baseline evidence.
+agent_governance_spec_writer,velocity_7d,,0,Commits count since window for code_path.
+agent_governance_spec_writer,velocity_30d,,0,Commits count since long window for code_path.
+agent_governance_spec_writer,churn_30d,,0.000,Proxy churn from journal per-agent updates (best-effort).
+agent_governance_spec_writer,confidence_score,,0.600,Composite confidence from quality+maturity+stability+velocity-churn.
