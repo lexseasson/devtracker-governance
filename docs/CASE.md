@@ -11,3 +11,10 @@ What governance boundaries were introduced.
 
 ## Outcome
 What became measurable / explainable after.
+
+
+Human intent → Tracker (semantics)
+              ↑
+        DevTracker
+              ↓
+Git / CI / Agents → Evidence
