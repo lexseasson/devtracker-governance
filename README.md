@@ -61,3 +61,6 @@ DevTracker can:
 ```bash
 pip install -r requirements.txt
 pip install -r requirements-dev.txt
+
+“This repository documents an approach to governed human–LLM collaboration.
+It is intentionally opinionated and not intended as a plug-and-play framework.”
