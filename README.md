@@ -22,6 +22,9 @@ DevTracker enforces that boundary as a contract.
 
 This makes the tracker usable as a shared contract between humans and automation.
 
+“This repository documents an approach to governed human–LLM collaboration.
+It is intentionally opinionated and not intended as a plug-and-play framework.”
+
 ## What it does
 
 Given:
@@ -62,6 +65,3 @@ DevTracker can:
 pip install -r requirements.txt
 pip install -r requirements-dev.txt
 
-###
-“This repository documents an approach to governed human–LLM collaboration.
-It is intentionally opinionated and not intended as a plug-and-play framework.”
